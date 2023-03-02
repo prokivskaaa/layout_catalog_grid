@@ -13,25 +13,24 @@
 
   &__card {
     display: grid;
-    grid-template-columns: #{$column-width};
-    grid-template-rows: #{$column-height};
-    place-items: center;
-    width: #{$column-width};
-    min-height: #{$column-height};
+    align-items: center;
+    justify-items: center;
+    width: $column-width;
+    height: $column-height;
 
     border: 1px solid #ccc;
     border-radius: 5px;
   }
 
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, #{$column-width});
+    grid-template-columns: repeat(2, $column-width);
   }
 
   @media (min-width: 768px) {
-    grid-template-columns: repeat(3, #{$column-width});
+    grid-template-columns: repeat(3, $column-width);
   }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, #{$column-width});
+    grid-template-columns: repeat(4, $column-width);
   }
 }
