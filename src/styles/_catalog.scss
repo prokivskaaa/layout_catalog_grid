@@ -1,11 +1,12 @@
-$column-width: 200px;
-$column-height: 300px;
-
 .catalog {
+  $column-width: 200px;
+  $column-height: 300px;
+
   display: grid;
   gap: 48px;
   grid-template-columns: 200px;
   place-items: center;
+
   justify-content: center;
   margin: 0 auto;
   padding-bottom: 48px;
@@ -17,22 +18,20 @@ $column-height: 300px;
     place-items: center;
     width: #{$column-width};
     min-height: #{$column-height};
+
     border: 1px solid #ccc;
     border-radius: 5px;
   }
 
   @media (min-width: 488px) {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, #{$column-width});
   }
 
   @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-    }
+    grid-template-columns: repeat(3, #{$column-width});
+  }
 
   @media (min-width: 1024px) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(4, #{$column-width});
   }
 }
